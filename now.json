@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "name": "debug-zeit",
+  "regions": ["bru"],
+  "alias": ["debug-zeit"],
+  "builds": [
+    {
+      "src": "packages/backendindex.js",
+      "use": "@now/node-server@0.7.3"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "/packages/backendindex.js"
+    }
+  ]
+}
